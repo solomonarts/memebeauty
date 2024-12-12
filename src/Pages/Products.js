@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import FrostedOverlay from "../Components/FrostedOverlay";
+import { backgrounds } from "../constants";
 
 const items = [
   {
     id: 1,
     name: "Hydrating Facial Cream",
     price: 25,
-    image: "sample-product-1.jpg",
+    image: "meme3.jpeg",
   },
   {
     id: 2,
     name: "Brightening Face Mask",
     price: 15,
-    image: "sample-product-2.jpg",
+    image: "meme4.jpeg",
   },
   {
     id: 3,
     name: "Nourishing Body Butter",
     price: 20,
-    image: "sample-product-3.jpg",
+    image: "meme7.jpeg",
   },
 ];
 
@@ -64,11 +65,13 @@ const Products = ({ productsref }) => {
           {items.map((product) => (
             <div key={product.id} className="border rounded-lg p-4 shadow">
               <img
-                src={product.image}
+                src={backgrounds[product.image]}
                 alt={product.name}
                 className="w-full h-32 object-cover mb-4"
               />
-              <h2 className="text-lg text-white font-semibold">{product.name}</h2>
+              <h2 className="text-lg text-white font-semibold">
+                {product.name}
+              </h2>
               <p className="text-white">${product.price.toFixed(2)}</p>
               <button
                 onClick={() => addToCart(product)}
