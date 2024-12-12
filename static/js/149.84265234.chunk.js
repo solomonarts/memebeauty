@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmemespa=self.webpackChunkmemespa||[]).push([[149],{8149:(e,a,r)=>{r.r(a),r.d(a,{default:()=>m});var s=r(9379),p=r(3279),u=r(1299),k=r(9914);var m=(0,s.A)((0,s.A)({renderer:k.J},p.W),u.n)}}]);
+//# sourceMappingURL=149.84265234.chunk.js.map
