@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import FrostedOverlay from "../Components/FrostedOverlay";
 import { backgrounds } from "../constants";
+import { Button } from "antd";
+import { ButtonGroup } from "@nextui-org/react";
 
 const items = [
   {
@@ -55,13 +57,34 @@ const Products = ({ productsref }) => {
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
+  const sendToWhatsApp = (cart) => {
+    const phoneNumber = "+256786085633"; // Replace with your WhatsApp number
+    const cartItems = cart
+      .map(
+        (item) =>
+          `*${item.name}* - ${item.quantity} x ${item.price} = ${
+            item.quantity * item.price
+          }`
+      )
+      .join("\n");
+    const totalPrice = cart.reduce(
+      (total, item) => total + item.quantity * item.price,
+      0
+    );
+    const message = `Hello, I'd like to order:\n\n${cartItems}\n\n*Total: ${totalPrice}*\nVisit: https://solomonarts.github.io/memebeauty/`;
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <FrostedOverlay>
       <div ref={productsref} id="products" className="p-6">
         <h1 className="text-2xl font-bold mb-4">Mini Shop</h1>
 
         {/* Product List */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {items.map((product) => (
             <div key={product.id} className="border rounded-lg p-4 shadow">
               <img
@@ -97,7 +120,7 @@ const Products = ({ productsref }) => {
                 >
                   <div>
                     <h3 className="text-lg font-semibold">{item.name}</h3>
-                    <p className="text-gray-600">${item.price.toFixed(2)}</p>
+                    <p className="text-white font-semibold">${item.price.toFixed(2)}</p>
                     <div className="flex items-center mt-2">
                       <button
                         onClick={() =>
@@ -133,6 +156,8 @@ const Products = ({ productsref }) => {
               <div className="text-right font-semibold text-lg mt-4">
                 Total: ${total.toFixed(2)}
               </div>
+
+              <button className="text-lg text-white border-1 border-white rounded-xl px-3 py-2" onClick={() => sendToWhatsApp(cart)}>Order Now</button>
             </div>
           )}
         </div>

@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import BackgroundChanger from "./Components/BackgroundChanger";
 import VideoBackground from "./Components/Videobackground";
 import Sections from "./Components/Sections";
 import Footer from "./Components/Footer";
+import MainNavbar from "./Components/Navbar";
 
 const App = () => {
   const homeref = useRef(null);
@@ -44,7 +43,7 @@ const App = () => {
         <VideoBackground />
 
         {/* Fixed Navbar */}
-        <Navbar scrollToSection={(section) => scrollToSection(section)} />
+        <MainNavbar scrollToSection={(section) => scrollToSection(section)} />
 
         {/* Page Routes */}
         <div className="pt-16">

@@ -2,16 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./Assets/styles/Custombtns.scss";
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 video {
-    transition: filter 0.2s ease-out;
-    filter: blur(0px);
-  }
-  
-  video.loading {
-    filter: blur(10px); /* Add blur while loading */
-  }
-  
+  transition: filter 0.2s ease-out;
+  filter: blur(0px);
+}
+
+video.loading {
+  filter: blur(10px); /* Add blur while loading */
+}

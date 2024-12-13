@@ -1,5 +1,6 @@
 import React from "react";
 import FrostedOverlay from "../Components/FrostedOverlay";
+import BookingSection from "../Components/BookingSection";
 
 const Routines = ({ routinesref }) => {
   return (
@@ -24,18 +25,13 @@ const Routines = ({ routinesref }) => {
 
         <div>
           <header>
-            <h1>Tailored Skincare Routines</h1>
-            <p>
+            <h1 className="text-4xl font-bold text-white">Tailored Skincare Routines</h1>
+            <p className="my-6 text-lg text-white/90">
               Book a consultation with our experts for personalized skincare
               recommendations.
             </p>
           </header>
-          <section>
-            <h2>Normal Skin Routine</h2>
-            <p>Step 1: Cleanse with Gentle Foaming Cleanser</p>
-            <p>Step 2: Tone with Hydrating Toner</p>
-            <p>Step 3: Moisturize with Hydrating Facial Cream</p>
-          </section>
+         <BookingSection />
         </div>
       </FrostedOverlay>
     </div>
