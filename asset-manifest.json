@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/memebeauty/static/css/main.180b4945.css",
-    "main.js": "/memebeauty/static/js/main.86f9b334.js",
+    "main.css": "/memebeauty/static/css/main.598b65b1.css",
+    "main.js": "/memebeauty/static/js/main.a9ff4d70.js",
     "static/js/149.84265234.chunk.js": "/memebeauty/static/js/149.84265234.chunk.js",
     "static/js/453.34421a3c.chunk.js": "/memebeauty/static/js/453.34421a3c.chunk.js",
     "static/media/bgvid3.mp4": "/memebeauty/static/media/bgvid3.c75c34401c853a55717c.mp4",
     "static/media/memelogo.png": "/memebeauty/static/media/memelogo.74415347d9fc098784bc.png",
     "static/media/expert1.png": "/memebeauty/static/media/expert1.bccc533f748d90fdd813.png",
     "index.html": "/memebeauty/index.html",
-    "main.180b4945.css.map": "/memebeauty/static/css/main.180b4945.css.map",
-    "main.86f9b334.js.map": "/memebeauty/static/js/main.86f9b334.js.map",
+    "main.598b65b1.css.map": "/memebeauty/static/css/main.598b65b1.css.map",
+    "main.a9ff4d70.js.map": "/memebeauty/static/js/main.a9ff4d70.js.map",
     "149.84265234.chunk.js.map": "/memebeauty/static/js/149.84265234.chunk.js.map",
     "453.34421a3c.chunk.js.map": "/memebeauty/static/js/453.34421a3c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.180b4945.css",
-    "static/js/main.86f9b334.js"
+    "static/css/main.598b65b1.css",
+    "static/js/main.a9ff4d70.js"
   ]
 }
