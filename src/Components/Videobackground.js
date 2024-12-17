@@ -45,11 +45,13 @@ const VideoBackgroundChanger = () => {
       <video
         ref={videoRef}
         className="w-full h-full object-cover"
-        src={bgvideo3} // Replace with your video file path
+        // Replace with your video file path
         muted
         preload="auto"
         onLoadedData={handleVideoLoad}
-      />
+      >
+        <source src={bgvideo3} type="video/mp4" />
+      </video>
     </div>
   );
 };
